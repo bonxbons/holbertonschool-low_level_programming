@@ -1,17 +1,24 @@
-#ifndef LISTS_H
-#define LISTS_H
+#ifndef H_LISTS
+#define H_LISTS
 
-#include <stddef.h>  /* Include for size_t */
+#include <stddef.h>
 
-/* Define the structure for a linked list node */
-typedef struct list_t {
-    char *str;               /* Assuming str is a string (adjust data type as needed) */
-    unsigned int len;        /* Assuming len is the length of the string */
-    struct list_t *next;
+/**
+ * struct list_t - singly linked list
+ * @str: string data
+ * @len: length of the string
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * for Holberton project
+ */
+typedef struct list_t
+{
+	char *str;
+	unsigned int len;
+	struct list_t *next;
 } list_t;
 
-/* Function prototype for print_list */
 size_t print_list(const list_t *h);
 
-#endif /* LISTS_H */
-
+#endif /* H_LISTS */
